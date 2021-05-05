@@ -1,3 +1,8 @@
+import javax.swing.JButton;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.GroupLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -30,6 +35,7 @@ public class Debug_1 extends javax.swing.JFrame {
         Button_Sum = new javax.swing.JButton();
         Button_Minus = new javax.swing.JButton();
         Button_Mul = new javax.swing.JButton();
+        Button_Div = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -61,30 +67,41 @@ public class Debug_1 extends javax.swing.JFrame {
                 Button_MulActionPerformed(evt);
             }
         });
+        
+        Button_Div.setText("Div");
+        Button_Div.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            	Button_DivActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Button_Sum, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-                    .addComponent(Button_Minus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Button_Mul, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(43, Short.MAX_VALUE))
+        	jPanel1Layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(jPanel1Layout.createSequentialGroup()
+        			.addGap(31)
+        			.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+        				.addComponent(Button_Div, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
+        				.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING, false)
+        					.addComponent(Button_Sum, GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+        					.addComponent(Button_Minus, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        					.addComponent(Button_Mul, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        			.addContainerGap(43, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(Button_Sum)
-                .addGap(18, 18, 18)
-                .addComponent(Button_Minus)
-                .addGap(18, 18, 18)
-                .addComponent(Button_Mul)
-                .addContainerGap(184, Short.MAX_VALUE))
+        	jPanel1Layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(jPanel1Layout.createSequentialGroup()
+        			.addGap(22)
+        			.addComponent(Button_Sum)
+        			.addGap(18)
+        			.addComponent(Button_Minus)
+        			.addGap(18)
+        			.addComponent(Button_Mul)
+        			.addGap(18)
+        			.addComponent(Button_Div)
+        			.addContainerGap(145, Short.MAX_VALUE))
         );
+        jPanel1.setLayout(jPanel1Layout);
 
         jLabel2.setText("a");
 
@@ -197,7 +214,14 @@ public class Debug_1 extends javax.swing.JFrame {
         double Mul = 0;
         Mul = Input1*Input2;
         ketqua.setText(Mul+ " ");
-    }                                          
+    }      
+    private void Button_DivActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        double Input1 = Double.parseDouble(Input_variableA.getText());
+        double Input2 = Double.parseDouble(Input_variableB.getText());
+        double Div = 0;
+        Div = Input1/Input2;
+        ketqua.setText(Div+ " ");
+    }
 
     /**
      * @param args the command line arguments
@@ -247,5 +271,6 @@ public class Debug_1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField ketqua;
+    private javax.swing.JButton Button_Div;
     // End of variables declaration                   
 }
