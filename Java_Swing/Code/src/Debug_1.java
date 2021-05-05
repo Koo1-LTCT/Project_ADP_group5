@@ -129,9 +129,9 @@ public class Debug_1 extends javax.swing.JFrame {
         Title.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         Title.setForeground(new java.awt.Color(255, 0, 204));
         Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Title.setText("Máy Tính Đơn Giản");
+        Title.setText("MÃ¡y TÃ­nh Ä�Æ¡n Giáº£n");
 
-        ButtomResult.setText("Kết Quả");
+        ButtomResult.setText("K\u1EBFt qu\u1EA3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
