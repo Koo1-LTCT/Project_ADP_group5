@@ -27,8 +27,9 @@ public class Debug_1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        ButtomSum = new javax.swing.JButton();
-        ButttomMinus = new javax.swing.JButton();
+        Button_Sum = new javax.swing.JButton();
+        Button_Minus = new javax.swing.JButton();
+        Button_Mul = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -40,17 +41,24 @@ public class Debug_1 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ButtomSum.setText("SUM");
-        ButtomSum.addActionListener(new java.awt.event.ActionListener() {
+        Button_Sum.setText("Sum");
+        Button_Sum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtomSumActionPerformed(evt);
+                Button_SumActionPerformed(evt);
             }
         });
 
-        ButttomMinus.setText("MINUS");
-        ButttomMinus.addActionListener(new java.awt.event.ActionListener() {
+        Button_Minus.setText("Minus");
+        Button_Minus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButttomMinusActionPerformed(evt);
+                Button_MinusActionPerformed(evt);
+            }
+        });
+
+        Button_Mul.setText("Mul");
+        Button_Mul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_MulActionPerformed(evt);
             }
         });
 
@@ -59,25 +67,28 @@ public class Debug_1 extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
+                .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ButttomMinus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ButtomSum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                    .addComponent(Button_Sum, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                    .addComponent(Button_Minus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button_Mul, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(ButtomSum)
-                .addGap(26, 26, 26)
-                .addComponent(ButttomMinus)
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addGap(22, 22, 22)
+                .addComponent(Button_Sum)
+                .addGap(18, 18, 18)
+                .addComponent(Button_Minus)
+                .addGap(18, 18, 18)
+                .addComponent(Button_Mul)
+                .addContainerGap(184, Short.MAX_VALUE))
         );
 
-        jLabel2.setText("Input1");
+        jLabel2.setText("a");
 
-        jLabel3.setText("Input2");
+        jLabel3.setText("b");
 
         Input_variableA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,21 +175,29 @@ public class Debug_1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }                                               
 
-    private void ButtomSumActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    private void Button_SumActionPerformed(java.awt.event.ActionEvent evt) {                                           
         double Input1 = Double.parseDouble(Input_variableA.getText());
         double Input2 = Double.parseDouble(Input_variableB.getText());
-        double SUM = 0;
-        SUM = Input2+Input1;
-        ketqua.setText(SUM+ " ");
-    }                                         
+        double Sum = 0;
+        Sum = Input2+Input1;
+        ketqua.setText(Sum+ " ");
+    }                                          
 
-    private void ButttomMinusActionPerformed(java.awt.event.ActionEvent evt) {                                             
-      double Input1 = Double.parseDouble(Input_variableA.getText());
+    private void Button_MinusActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        double Input1 = Double.parseDouble(Input_variableA.getText());
         double Input2 = Double.parseDouble(Input_variableB.getText());
-        double MINUS = 0;
-        MINUS = Input1-Input2;
-        ketqua.setText(MINUS+ " ");
+        double Minus = 0;
+        Minus = Input1-Input2;
+        ketqua.setText(Minus+ " ");
     }                                            
+
+    private void Button_MulActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        double Input1 = Double.parseDouble(Input_variableA.getText());
+        double Input2 = Double.parseDouble(Input_variableB.getText());
+        double Mul = 0;
+        Mul = Input1*Input2;
+        ketqua.setText(Mul+ " ");
+    }                                          
 
     /**
      * @param args the command line arguments
@@ -217,8 +236,9 @@ public class Debug_1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify                     
     private javax.swing.JButton ButtomResult;
-    private javax.swing.JButton ButtomSum;
-    private javax.swing.JButton ButttomMinus;
+    private javax.swing.JButton Button_Minus;
+    private javax.swing.JButton Button_Mul;
+    private javax.swing.JButton Button_Sum;
     private javax.swing.JTextField Input_variableA;
     private javax.swing.JTextField Input_variableB;
     private javax.swing.JLabel Title;
