@@ -10,7 +10,7 @@ public class Debug_1 extends javax.swing.JFrame {
 	public Debug_1() {
 		initComponents();
 	}
-
+	// Author : Huynh Viet Bao
 	private void initComponents() {
 
 		jPanel1 = new javax.swing.JPanel();
@@ -118,7 +118,7 @@ public class Debug_1 extends javax.swing.JFrame {
 		title.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
 		title.setForeground(new java.awt.Color(255, 0, 204));
 		title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		title.setText("Máy Tính Đơn Giản");
+		title.setText("MÃ¡y TÃ­nh Ä�Æ¡n Giáº£n");
 
 		buttonResult.setText("K\u1EBFt qu\u1EA3");
 
@@ -216,25 +216,26 @@ public class Debug_1 extends javax.swing.JFrame {
 			java.util.logging.Logger.getLogger(Debug_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 		}
 		java.awt.EventQueue.invokeLater(new Runnable() {
+			//ham chay
 			public void run() {
 				new Debug_1().setVisible(true);
 			}
 		});
 	}
-
 	// Variables declaration - do not modify
-	private javax.swing.JButton buttonResult;
-	private javax.swing.JButton Button_Minus;
-	private javax.swing.JButton Button_Mul;
-	private javax.swing.JButton buttomSum;
-	private javax.swing.JTextField inputVariableA;
-	private javax.swing.JTextField inputVariableB;
-	private javax.swing.JLabel title;
-	private javax.swing.JLabel jLabel2;
-	private javax.swing.JLabel jLabel3;
-	private javax.swing.JPanel jPanel1;
-	private javax.swing.JPanel jPanel2;
-	private javax.swing.JTextField result;
-	private javax.swing.JButton Button_Div;
-	// End of variables declaration
+		private javax.swing.JButton buttonResult;
+		private javax.swing.JButton Button_Minus;
+		private javax.swing.JButton Button_Mul;
+		private javax.swing.JButton buttomSum;
+		private javax.swing.JTextField inputVariableA;
+		private javax.swing.JTextField inputVariableB;
+		private javax.swing.JLabel title;
+		private javax.swing.JLabel jLabel2;
+		private javax.swing.JLabel jLabel3;
+		private javax.swing.JPanel jPanel1;
+		private javax.swing.JPanel jPanel2;
+		private javax.swing.JTextField result;
+		private javax.swing.JButton Button_Div;
+		// End of variables declaration
+	
 }
